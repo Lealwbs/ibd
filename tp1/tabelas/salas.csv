@@ -1,0 +1,101 @@
+id,nome,capacidade
+1,Sala Azul,50
+2,Sala Vermelha,75
+3,Sala Verde,100
+4,Sala Amarela,60
+5,Sala Laranja,80
+6,Sala Roxa,90
+7,Sala Cinza,45
+8,Sala Branca,120
+9,Sala Preta,70
+10,Sala Dourada,55
+11,Sala Prata,85
+12,Sala Turquesa,65
+13,Sala Magenta,95
+14,Sala Oliva,110
+15,Sala Violeta,50
+16,Sala Bordô,75
+17,Sala Carmim,100
+18,Sala Esmeralda,60
+19,Sala Rubi,80
+20,Sala Safira,90
+21,Sala Âmbar,45
+22,Sala Pérola,120
+23,Sala Ébano,70
+24,Sala Ouro,55
+25,Sala Platina,85
+26,Sala Água-marinha,65
+27,Sala Coral,95
+28,Sala Jade,110
+29,Sala Marfim,50
+30,Sala Terracota,75
+31,Sala Aço,100
+32,Sala Bronze,60
+33,Sala Cobre,80
+34,Sala Níquel,90
+35,Sala Estanho,45
+36,Sala Alumínio,120
+37,Sala Chumbo,70
+38,Sala Titânio,55
+39,Sala Zinco,85
+40,Sala Cromo,65
+41,Sala Ciano,95
+42,Sala Fúcsia,110
+43,Sala Índigo,50
+44,Sala Salmão,75
+45,Sala Bege,100
+46,Sala Caqui,60
+47,Sala Mostarda,80
+48,Sala Ferrugem,90
+49,Sala Escarlate,45
+50,Sala Lavanda,120
+51,Sala Limão,70
+52,Sala Pêssego,55
+53,Sala Tangerina,85
+54,Sala Vinho,65
+55,Sala Ametista,95
+56,Sala Celeste,110
+57,Sala Grafite,50
+58,Sala Palha,75
+59,Sala Areia,100
+60,Sala Tijolo,60
+61,Sala Gelo,80
+62,Sala Cacau,90
+63,Sala Oliva,45
+64,Sala Rosa,120
+65,Sala Marrom,70
+66,Sala Violeta,55
+67,Sala Azul Celeste,85
+68,Sala Verde Musgo,65
+69,Sala Vermelha Escarlate,95
+70,Sala Amarela Ouro,110
+71,Sala Laranja Queimado,50
+72,Sala Roxa Imperial,75
+73,Sala Cinza Chumbo,100
+74,Sala Branca Neve,60
+75,Sala Preta Noite,80
+76,Sala Dourada Antiga,90
+77,Sala Prata Envelhecida,45
+78,Sala Turquesa Vibrante,120
+79,Sala Magenta Profundo,70
+80,Sala Oliva Suave,55
+81,Sala Violeta Pálido,85
+82,Sala Bordô Rico,65
+83,Sala Carmim Intenso,95
+84,Sala Esmeralda Brilhante,110
+85,Sala Rubi Flamejante,50
+86,Sala Safira Celeste,75
+87,Sala Âmbar Radiante,100
+88,Sala Pérola Lustrosa,60
+89,Sala Ébano Sombrio,80
+90,Sala Ouro Puro,90
+91,Sala Platina Elegante,45
+92,Sala Água-marinha Cristalina,120
+93,Sala Coral Vivo,70
+94,Sala Jade Exuberante,55
+95,Sala Marfim Delicado,85
+96,Sala Terracota Rústica,65
+97,Sala Aço Polido,95
+98,Sala Bronze Antigo,110
+99,Sala Cobre Brilhante,50
+100,Sala Níquel Escovado,75
