@@ -32,91 +32,69 @@ WHERE id > 90
 printQuery(query_base)
 
 query_a1 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select titulo from filmes as f where f.genero = 'Ação';
 """
 
 printQuery(query_a1)
+#colocar nomes das tabelas .csv
 
 query_a2 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select nome from salas as s where s.capacidade > 100;
 """
 
 printQuery(query_a2)
 
 query_a3 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select f.titulo, f.preco_ingresso from filmes as f, sessoes as s
+where s.filme_id = f.id;
 """
 
 printQuery(query_a3)
 
+query_a3dnv = f"""
+select nome from clientes as c
+inner join ingressos as i on c.id = i.cliente_id;
+"""
+
+printQuery(query_a3dnv)
+
 query_a4 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select nome from filmes as f where f.classificacao_indicativa > 16;
 """
 
 printQuery(query_a4)
 
 query_a5 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select nome, data_compra from clientes as c
+inner join ingressos as i on c.id = i.cliente_id
+inner join sessoes as s on i.sessao_id = s.id;
 """
 
 printQuery(query_a5)
 
 query_a6 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select titulo from filmes as f
+inner join sessoes as s on f.id = s.filme_id;
 """
 
 printQuery(query_a6)
 
 query_a7 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select sessao_id from sessoes where data_hora like '2025-04-25%';
 """
 
 printQuery(query_a7)
 
 query_a8 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select cliente_id, count(*) from ingressos group by cliente_id;
 """
 
 printQuery(query_a8)
 
 query_a9 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
+select titulo from filmes as f
+inner join sessoes as s on f.id = s.filme_id
+inner join ingressos as i on s.id = i.sessao_id;
 """
 
 printQuery(query_a9)
-
-query_a10 = f"""
-SELECT id, nome, email, data_nascimento
-FROM {CLIENTES}
-WHERE id > 90
---AND id < 95
-"""
-
-printQuery(query_a10)
