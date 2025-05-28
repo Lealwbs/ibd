@@ -303,3 +303,91 @@ query_b2 = """
 """
 
 printQuery(query_b2)
+
+query_b3 = """
+  SELECT id, filme_id, sala_id, data_hora
+  FROM sessoes
+  WHERE STRFTIME('%H:%M:%S', data_hora) > '18:00:00'
+"""
+
+printQuery(query_b3)
+
+query_b4 = """
+  SELECT c.id, c.nome, COUNT(*) AS qtde_ingressos
+  FROM clientes AS c
+  INNER JOIN ingressos AS i ON c.id = i.cliente_id
+  GROUP BY c.id, c.nome
+  HAVING qtde_ingressos > 2
+  ORDER BY c.id
+"""
+
+printQuery(query_b4)
+
+query_b5 = """
+  SELECT AVG(preco_ingressos) AS average
+  FROM (SELECT
+          s.id AS sessao_id,
+          s.preco_ingresso AS preco_ingressos
+        FROM sessoes AS s)
+
+"""
+# Obs: O enunciado ficou ambíguo, foi isso o que eu entendi:
+# Seria a média dos preços de todas as sessões?
+
+printQuery(query_b5)
+
+query_b6 = """
+  SELECT s.id AS id_sessao, COUNT(i.sessao_id) AS qtde_ingressos
+  FROM sessoes AS s
+  LEFT JOIN ingressos AS i ON s.id = i.sessao_id
+  GROUP BY s.id
+  HAVING qtde_ingressos = 0
+"""
+
+printQuery(query_b6)
+
+query_b7 = """
+  SELECT f.id, f.titulo, COUNT(s.id) AS qtde_sessoes
+  FROM filmes AS f
+  INNER JOIN sessoes AS s ON f.id = s.filme_id
+  GROUP BY f.id, f.titulo
+  HAVING COUNT(s.id) > 3
+"""
+
+printQuery(query_b7)
+
+query_b8 = """
+  SELECT c.id, c.nome,
+  FROM clientes AS c
+  INNER JOIN ingressos AS i ON c.id = i.cliente_id
+  INNER JOIN sessoes AS s ON i.sessao_id = s.id
+  INNER JOIN filmes AS f ON s.filme_id = f.id
+  WHERE f.genero = 'Drama'
+  GROUP BY c.id, c.nome
+"""
+
+printQuery(query_b8)
+
+query_b9 = """
+  SELECT s.id, s.data_hora, s.filme_id, f.titulo
+  FROM sessoes AS s
+  INNER JOIN filmes AS f ON s.filme_id = f.id
+  WHERE f.titulo = 'Vingadores: Ultimato'
+"""
+
+printQuery(query_b9)
+
+query_b10 = """
+  SELECT data, qtde_ingressos
+  FROM (SELECT STRFTIME('%Y/%m/%d', i.data_compra) AS data , COUNT(*) AS qtde_ingressos
+        FROM ingressos AS i
+        GROUP BY data)
+  WHERE qtde_ingressos = (SELECT MAX(qtde_ingressos)
+                          FROM (SELECT STRFTIME('%Y/%m/%d', i.data_compra) AS data , COUNT(*) AS qtde_ingressos
+                                FROM ingressos AS i
+                                GROUP BY data
+                               )
+                         )
+"""
+
+printQuery(query_b10)
