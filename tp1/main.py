@@ -17,6 +17,8 @@ def query(queryStr):
 
 def printQuery(queryStr):
   print(query(queryStr))
+  print("\n")
+  print("---------------------------------------------------------\n")
 
 """# **Criação do esquema do Banco de Dados**"""
 
